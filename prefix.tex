@@ -1,0 +1,74 @@
+%\documentclass{asaproc}
+
+
+%\usepackage{times}
+%If you have times installed on your system, please
+%uncomment the line above
+
+%For figures and tables to stretch across two columns
+%use \begin{figure*} \end{figure*} and
+%\begin{table*}\end{table*}
+% please place figures & tables as close as possible
+% to text references
+\usepackage{graphicx}
+
+
+\usepackage{charter} %choose default font ... your choice here % {mathptmx} % mathrsfs} % mathptmx} %mathpple} %mathpazo}
+\usepackage{enumerate} % for different labels in numbered lists
+\usepackage{xy}\xyoption{all} \xyoption{poly} \xyoption{knot}
+\usepackage{setspace}
+\usepackage{latexsym,amssymb,amsfonts,graphicx,color,fancyvrb,amsthm,enumerate,natbib,bm,booktabs,mathrsfs,float}
+\usepackage{mathrsfs}
+%\usepackage{movie15}
+%\usepackage[pdftex,pagebackref=true]{hyperref}
+\usepackage[svgnames,dvipsnames,x11names]{xcolor}%
+\usepackage{caption}
+\usepackage{mathtools}
+\usepackage{algorithm}
+\usepackage{fancyhdr}
+\usepackage{subfigure}
+
+%\usepackage{fancybox}
+\usepackage{multicol}
+\usepackage{setspace}               %%I have this package
+\usepackage{hyperref}
+\usepackage{nameref}                %% for reference
+
+%\usepackage[ansinew]{inputenc}
+%\usepackage[english]{babel}
+\usepackage{epsfig}
+\usepackage{amsmath}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+
+
+%% this is used to make reference
+\newcounter{mylabelcounter}
+
+\makeatletter
+\newcommand{\labelText}[2]{%
+#1\refstepcounter{mylabelcounter}%
+\immediate\write\@auxout{%
+  \string\newlabel{#2}{{1}{\thepage}{{\unexpanded{#1}}}{mylabelcounter.\number\value{mylabelcounter}}{}}%
+}%
+}
+\makeatother
+
+
+
+ \title{Using R Markdown to Generate Report in ASA Format}
+
+%input all authors' names
+
+\author{Anonymous$^1$, Banana Slug$^2$\\
+Department of Statistical Science, UC Santa Cruz$^1$\\
+College 9/10 Dining Hall$^2$}
+
+%input affiliations
+
+%{USDA Forest Service Forest Products Laboratory}
+
